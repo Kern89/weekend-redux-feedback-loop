@@ -5,6 +5,7 @@ import './App.css';
 // import for components
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
         <Route exact path='/understanding'>
           <Understanding />
         </Route>
-        <Route exact path='/support'></Route>
+        <Route exact path='/support'>
+          <Support />
+        </Route>
         <Route exact path='/comments'></Route>
         <Route exact path='/review'></Route>
         <Route exact path='/success'></Route>
