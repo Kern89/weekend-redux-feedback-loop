@@ -1,16 +1,18 @@
-import FeedbackRating from "../FeedbackRating/FeedbackRating";
-import { Button } from '@mui/material';
 import { useHistory } from "react-router-dom";
 import { useState } from 'react';
-import { FormControl, FormControlLabel, RadioGroup, Radio } from '@mui/material'
+import { FormControl, FormControlLabel, RadioGroup, Radio, Button } from '@mui/material';
+import { useDispatch } from "react-redux";
 
 function Feeling() {
+    const dispatch = useDispatch('');
     const history = useHistory();
     const [feel, setFeel] = useState('');
 
     const toUnderstanding = () => {
-        history.push('/understanding')
+        let action = { type: 'FEELING', payload: feel};
         console.log(feel);
+        dispatch(action);
+        history.push('/understanding');
     }
 
     return(

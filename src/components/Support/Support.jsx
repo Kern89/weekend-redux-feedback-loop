@@ -1,14 +1,16 @@
-import FeedbackRating from "../FeedbackRating/FeedbackRating";
-import { Button } from '@mui/material';
 import { useHistory } from "react-router-dom";
 import { useState } from 'react';
-import { FormControl, FormControlLabel, RadioGroup, Radio } from '@mui/material'
+import { FormControl, FormControlLabel, RadioGroup, Radio, Button } from '@mui/material';
+import { useDispatch } from 'react-redux';
 
 function Support() {
+    const dispatch = useDispatch();
     const history = useHistory();
     const [support, setSupport] = useState('');
     
     const toComments = () => {
+        let action = { type: 'SUPPORT', payload: support };
+        dispatch(action);
         history.push('/comments');
         console.log(support);
     }

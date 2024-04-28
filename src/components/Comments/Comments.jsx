@@ -1,16 +1,19 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
-import { FormControl, FormControlLabel, RadioGroup, Radio, TextField, Button } from '@mui/material'
+import { TextField, Button } from '@mui/material';
+import { useDispatch } from 'react-redux';
 
 function Comments() {
+    const dispatch = useDispatch();
     const history = useHistory();
     const [comment, setComment] = useState("");
 
 
     const toReview = () => {
-        history.push('/review')
+        let action = { type: 'COMMENTS', payload: comment };
+        dispatch(action);
+        history.push('/review');
         console.log(comment);
-
     }
     return(
         <>
