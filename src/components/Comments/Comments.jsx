@@ -1,9 +1,10 @@
-import { TextField, Button } from '@mui/material/TextField';
+import { TextField, Button } from '@mui/material';
+import { useHistory } from 'react-router-dom';
 
 function Comments() {
-
+    let history = useHistory();
     const toReview = () => {
-        
+      history.push('/review')
     }
     return(
         <>
@@ -11,7 +12,8 @@ function Comments() {
         <TextField 
         label="Comments" 
         sx={{ width: '50ch'}}/>
-        <Button variant='contained'>Next</Button>
+        <br />
+        <Button variant='contained' onClick={toReview}>Next</Button>
         </>
     )
 };

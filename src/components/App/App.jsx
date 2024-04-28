@@ -17,7 +17,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Router>
-        <Route exact path='/feeling'>
+        <Route exact path='/'>
           <Feeling />
         </Route>
         <Route exact path='/understanding'>
@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/comments'>
           <Comments />
         </Route>
-        <Route exact path='/review'></Route>
+        <Route exact path='/review'>In review</Route>
         <Route exact path='/success'></Route>
       </Router>
     </div>
