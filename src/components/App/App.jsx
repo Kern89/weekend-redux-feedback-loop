@@ -2,9 +2,9 @@ import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
-import FeedbackRating from '../FeedbackRating/FeedbackRating';
-import Feeling from '../Feeling/Feeling';
 // import for components
+import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
 
 function App() {
 
@@ -18,7 +18,9 @@ function App() {
         <Route exact path='/feeling'>
           <Feeling />
         </Route>
-        <Route exact path='/understanding'></Route>
+        <Route exact path='/understanding'>
+          <Understanding />
+        </Route>
         <Route exact path='/support'></Route>
         <Route exact path='/comments'></Route>
         <Route exact path='/review'></Route>
