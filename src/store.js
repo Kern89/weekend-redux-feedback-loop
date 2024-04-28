@@ -14,7 +14,7 @@ import logger from 'redux-logger'
         } else if (action.type === 'SUPPORT') {
             let support = action.payload;
             return [...state, support];
-        } else if (action.type === ' comments') {
+        } else if (action.type === 'COMMENTS') {
             let comments = action.payload;
             return [...state, comments]
         }
