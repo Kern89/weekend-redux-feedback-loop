@@ -4,7 +4,7 @@ import logger from 'redux-logger'
 
 // Create reducers:
 
-    const currentFeedback = (state = '', action) => {
+    const currentFeedback = (state = [], action) => {
         if(action.type === 'FEELING') {
             let feeling = action.payload;
             return [...state, feeling];
@@ -17,6 +17,8 @@ import logger from 'redux-logger'
         } else if (action.type === 'COMMENTS') {
             let comments = action.payload;
             return [...state, comments]
+        } else if (action.type === 'RESET') {
+            return []
         }
         return state;
     }
