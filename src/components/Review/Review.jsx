@@ -40,7 +40,7 @@ function Review() {
                 </tr>
             </tbody>
         </table>
-        <Button variant='contained' onClick={sendToServer}>Submit feedback</Button>
+        <Button variant='contained' onClick={sendToServer} data-testid="next" >Submit feedback</Button>
         </>
     )
 };

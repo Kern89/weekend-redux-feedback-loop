@@ -14,7 +14,7 @@ function Success() {
     return(
         <>
         <h3>Thank you for your feedback!</h3>
-        <Button variant='contained' onClick={resetFeedback}>Start new feedback</Button>
+        <Button variant='contained' onClick={resetFeedback} data-testid="next" >Start new feedback</Button>
         </>
     )
 };

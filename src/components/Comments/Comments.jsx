@@ -21,10 +21,11 @@ function Comments() {
         <TextField 
         label="Comments"
         type="text"
+        data-testid="input"
         sx={{ width: '50ch'}}
         onChange={(e) => {setComment(e.target.value)}}/>
         <br />
-        <Button variant='contained' onClick={toReview}>Next</Button>
+        <Button variant='contained' onClick={toReview} data-testid="next" >Next</Button>
         </>
     )
 };

@@ -28,34 +28,39 @@ function Support() {
                     control={<Radio />}
                     onChange={() => {setSupport(1)}}
                     label="1"
-                    labelPlacement="bottom" />
+                    labelPlacement="bottom"
+                    data-testid="input" />
                 <FormControlLabel 
                     value="2"
                     onChange={() => {setSupport(2)}}
                     control={<Radio />}
                     label="2"
-                    labelPlacement="bottom" />
+                    labelPlacement="bottom"
+                    data-testid="input" />
                 <FormControlLabel 
                     value="3"
                     onChange={() => {setSupport(3)}}
                     control={<Radio />}
                     label="3"
-                    labelPlacement="bottom"  />
+                    labelPlacement="bottom"
+                    data-testid="input"  />
                 <FormControlLabel 
                     value="4"
                     onChange={() => {setSupport(4)}}
                     control={<Radio />}
                     label="4"
-                    labelPlacement="bottom" />
+                    labelPlacement="bottom"
+                    data-testid="input" />
                 <FormControlLabel 
                     value="5"
                     onChange={() => {setSupport(5)}}
                     control={<Radio />}
                     label="5"
-                    labelPlacement="bottom" />
+                    labelPlacement="bottom"
+                    data-testid="input" />
             </RadioGroup>
         </FormControl>
-        <Button variant='contained' onClick={toComments}>Next</Button>
+        <Button variant='contained' onClick={toComments} data-testid="next" >Next</Button>
         </>
     )
 };
