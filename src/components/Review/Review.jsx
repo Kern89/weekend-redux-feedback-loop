@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux";
 import { Button } from '@mui/material';
 import axios from 'axios';
+import { useHistory } from "react-router-dom";
 
 function Review() {
+    const history = useHistory();
     const feedback = useSelector(store => store.currentFeedback)
     const feeling = feedback[0];
     const understanding = feedback[1]
@@ -12,7 +14,7 @@ function Review() {
 
     const sendToServer = () => {
         axios.post('/api/review', {feeling, understanding, support, comments}).then(response => {
-        
+            history.push('/success')
         }).catch((error) => {
             console.log(error);
         })
