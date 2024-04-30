@@ -25,7 +25,8 @@ function Comments() {
         sx={{ width: '50ch'}}
         onChange={(e) => {setComment(e.target.value)}}/>
         <br />
-        <Button variant='contained' onClick={toReview} data-testid="next" >Next</Button>
+        <br />
+        <Button variant='contained' onClick={toReview} data-testid="next" color='success'>Next</Button>
         </>
     )
 };

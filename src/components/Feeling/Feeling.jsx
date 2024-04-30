@@ -22,7 +22,7 @@ function Feeling() {
             <RadioGroup 
                 row
                 value={feel}
-                required
+                data-testid="input"
                 >
                 <FormControlLabel 
                     value="1"
@@ -30,38 +30,40 @@ function Feeling() {
                     onChange={() => {setFeel(1)}}
                     label="1"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
                 <FormControlLabel 
                     value="2"
                     onChange={() => {setFeel(2)}}
                     control={<Radio />}
                     label="2"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
                 <FormControlLabel 
                     value="3"
                     onChange={() => {setFeel(3)}}
                     control={<Radio />}
                     label="3"
                     labelPlacement="bottom"
-                    data-testid="input"  />
+                      />
                 <FormControlLabel 
                     value="4"
                     onChange={() => {setFeel(4)}}
                     control={<Radio />}
                     label="4"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
                 <FormControlLabel 
                     value="5"
                     onChange={() => {setFeel(5)}}
                     control={<Radio />}
                     label="5"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
             </RadioGroup>
         </FormControl>
-        <Button variant='contained' onClick={toUnderstanding} data-testid="next" >Next</Button>
+        <br />
+        <br />
+        <Button variant='contained' onClick={toUnderstanding} data-testid="next" color="success">Next</Button>
         </>
     )
 }

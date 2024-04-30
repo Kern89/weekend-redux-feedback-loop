@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { Button } from '@mui/material';
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
+import './Review.css';
 
 function Review() {
     const history = useHistory();
@@ -22,7 +23,7 @@ function Review() {
 
     return(
         <>
-        <table>
+        <table id="reviewTable">
             <thead>
                 <tr>
                     <td>Feeling</td>
@@ -40,7 +41,9 @@ function Review() {
                 </tr>
             </tbody>
         </table>
-        <Button variant='contained' onClick={sendToServer} data-testid="next" >Submit feedback</Button>
+        <br />
+        <br />
+        <Button variant='contained' onClick={sendToServer} data-testid="next" color='success' >Submit feedback</Button>
         </>
     )
 };

@@ -21,7 +21,7 @@ function Support() {
             <RadioGroup 
                 row
                 value={support}
-                required
+                data-testid="input"
                 >
                 <FormControlLabel 
                     value="1"
@@ -29,38 +29,40 @@ function Support() {
                     onChange={() => {setSupport(1)}}
                     label="1"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
                 <FormControlLabel 
                     value="2"
                     onChange={() => {setSupport(2)}}
                     control={<Radio />}
                     label="2"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
                 <FormControlLabel 
                     value="3"
                     onChange={() => {setSupport(3)}}
                     control={<Radio />}
                     label="3"
                     labelPlacement="bottom"
-                    data-testid="input"  />
+                      />
                 <FormControlLabel 
                     value="4"
                     onChange={() => {setSupport(4)}}
                     control={<Radio />}
                     label="4"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
                 <FormControlLabel 
                     value="5"
                     onChange={() => {setSupport(5)}}
                     control={<Radio />}
                     label="5"
                     labelPlacement="bottom"
-                    data-testid="input" />
+                     />
             </RadioGroup>
         </FormControl>
-        <Button variant='contained' onClick={toComments} data-testid="next" >Next</Button>
+        <br />
+        <br />
+        <Button variant='contained' onClick={toComments} data-testid="next"  color='success'>Next</Button>
         </>
     )
 };
