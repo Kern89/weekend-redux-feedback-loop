@@ -4,10 +4,10 @@
 
 ## Description
 
-Four step feedback survey
+Straight forward four step feedback survey, future editions will allow for client sign-in, edit upon review.
 
-<!-- 
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md). -->
+1. Create Database ("prime_feedback"), table insructions in database.sql
+2. npm install
+3. npm run server
+4. npm run client
+5. Please add you feedback and enjoy!
